@@ -6,7 +6,7 @@
 #    By: mweir <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/19 17:54:49 by mweir             #+#    #+#              #
-#    Updated: 2018/04/23 15:36:42 by mweir            ###   ########.fr        #
+#    Updated: 2018/04/23 18:30:50 by mweir            ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -41,10 +41,11 @@ all: $(NAME)
 main:
 	gcc main.c -L. -lft
 
-$(NAME): clean
+$(NAME): 
 	$(CC) $(FLAGS) -c $(SRCS)
 	ar -rc $(NAME) $(OBJ)
 	ranlib $(NAME)
+	rm -rf $(OBJ)
 
 .PHONY: clean fclean
 

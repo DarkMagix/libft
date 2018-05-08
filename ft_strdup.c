@@ -6,7 +6,7 @@
 /*   By: mweir <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/16 17:38:52 by mweir             #+#    #+#             */
-/*   Updated: 2018/04/19 17:48:54 by mweir            ###   ########.fr       */
+/*   Updated: 2018/05/06 20:33:33 by mweir            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strdup(const char *src)
 	len = 0;
 	while (src[len])
 		len++;
-	str = (char*)malloc(sizeof(char) * (len + 1));
+	str = (char*)ft_memalloc(sizeof(char) * (len + 1));
 	if (str == NULL)
 		return (NULL);
 	while (i < len)
