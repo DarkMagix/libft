@@ -6,7 +6,7 @@
 /*   By: mweir <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/16 14:14:14 by mweir             #+#    #+#             */
-/*   Updated: 2018/04/20 17:04:13 by mweir            ###   ########.fr       */
+/*   Updated: 2018/05/22 14:35:22 by mweir            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ typedef struct	s_list
 	size_t			content_size;
 	struct s_list	*next;
 }				t_list;
-
+# define BUFF_SIZE 1
 void			*ft_memset(void *data, int value, size_t len);
 void			*ft_bzero(void *data, size_t len);
 void			*ft_memcpy(void *dest, const void *src, size_t len);
@@ -75,6 +75,7 @@ void			ft_putchar_fd(char c, int fd);
 void			ft_putstr_fd(char const *s, int fd);
 void			ft_putendl_fd(char const *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
+int				ft_next_line(const int fd, char **line);
 
 t_list			*ft_lstnew(void const *content, size_t content_size);
 void			ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
